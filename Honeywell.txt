@@ -1,0 +1,44 @@
+abc_df = spark.read.table("db_name.table") -- 100 GB
+xyz_df = spark.read.csv('filename.csv'); -- 1 MB
+xyz_df.broadcast()
+joined_df = abc_df.join(xyz_df, 'id', how = 'inner').select(col('id').alias('id_abc'));
+joined_df.show();
+
+
+101
+102
+103
+
+----------------------------------------------
+Table: db_name_tbl : PIVOT, UNPIVOT, TRANSPOSE
+----------------------------------------------
+
+select 
+
+
+--File Systems : NTFS (New Technology File System, Windows,New), 
+                 HFS(Hierarchical File System - Mac), 
+                 FAT(File Allocation Table, Windows, old), 
+                 GFS (Global File SYstem, RED HAT), 
+                 UDF (Universal Disk Format - CD, DVD) 
+
+------------------------------------------------
+git clone
+git commit
+git push
+------------------------------------------------
+
+FILE FORMATS:
+------------
+1) PARQUET, ORC, AVRO, TEXT & SCENARIOS WHEN TO USE WHAT ?
+
+5M rows, 5 cols : write from DF
+
+-------------------------------------------------
+ACCESS CONTROL AND SECURITY ON ADLS
+ADLS:
+------
+/prod/proj/wfp/
+-landing: Dev community (RW)
+-stg: Dev Community + Analyst (D: RW; A: R)
+-prod: Only R
